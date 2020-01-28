@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <title>project</title>
+    </head>
+    <body>
+        <!-- start header-->
+        <div class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="logoImage">
+                    <h1><span>True</span> Concept</h1>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">aboutus</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="header-strategy">
+                    <div class="slogan">
+                        <p><span>we</span><span> enlight</span><span> corporates'</span><span> future</span></p>
+                    </div>
+                    <div class="strategy">
+                        <h2>Strategy Mentoring Workshops</h2>
+                        <p>In these workshops we mentor you & your team in building your strategy journey.We not only facilitate to you all the needed tools and help you in a step-by-step manner to get instant results from it, but we also blend needed skills like team work, time management, decision making & project management that we believe essential for any strategy to succeed</p>
+                        <p> <img src="../project/images/horse.jpg" alt="horseImage"> Build Your Strategy Today</p>
+                    </div>
+                    <div class="strategy-how">
+                        <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+                        <a href="#">How We Do That</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header-->
+
+        <!-- start help-section-->
+        <section class="help">
+            <div class="container">
+                <div class="service">
+                    <h1>we help through</h1>
+                    <input type="text" placeholder="service title">
+                    <button id="add" onclick="addNewBox()">Add</button>
+                </div>
+                <div id="service-title" class="service-title">
+                    <div id="box-one">
+                        ServiceTitle
+                        <i id="close-icon" class="fa fa-times" aria-hidden="true" onclick="deleteBoxOne()"></i>
+                    </div>
+                    <div id="box-two">
+                        ServiceTitle
+                        <i id="close-icon" class="fa fa-times" aria-hidden="true" onclick="deleteBoxTwo()"></i>
+                    </div>
+                    <div id="box-three">
+                        ServiceTitle
+                        <i id="close-icon" class="fa fa-times" aria-hidden="true" onclick="deleteBoxThree()"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end help-section-->
+        
+        <!-- my javascript file -->
+        <script src="js/js.js"></script>
+    </body>
+</html>
