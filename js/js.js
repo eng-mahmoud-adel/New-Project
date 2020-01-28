@@ -22,6 +22,7 @@ function addNewBox () {
         parent.appendChild(cloneBox);
 }
 
+
 // for removing boxes
 function deleteBoxOne () {
     boxOne.parentNode.removeChild(boxOne);

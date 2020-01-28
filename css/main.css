@@ -60,25 +60,19 @@
 
 @media (max-width: 575px) {             /* for extra small screens */
     .header  {
-        height: 720px;
+        height: 880px;
     }
 }
 
 @media (min-width: 576px) {             /* for small screens */
     .header  {
-        height: 720px;
+        height: 890px;
     }
 }
 
 @media (min-width: 768px) {             /* for medium screens */
     .header{
-        height: 700px;
-    }
-}
-
-@media (min-width: 992px) {             /* for large screens */
-    .header{
-        height: 660px;
+        height: 650px;
     }
 }
 
@@ -93,9 +87,22 @@
     }
 }
 
+@media (max-width: 575px) {             /* for extra small screens */
+    .header .navbar .logo  {
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 576px) {             /* for small screens */
+    .header .navbar .logo  {
+        margin-bottom: 80px;
+    }
+}
+
 @media (min-width: 768px) {             /* for medium screens */
     .header .navbar .logo {
         margin-left: 5px;
+        margin-bottom: 0;
     }
 }
 
@@ -154,26 +161,46 @@
 
 @media (max-width: 575px) {             /* for extra small screens */
     .header .navbar ul {
-
+        float: left;
     }
 }
 
 @media (min-width: 576px) {             /* for small screens */
+    .header .navbar ul {
+        float: left;
+    }
+}
+
+@media (min-width: 768px) {             /* for medium screens */
     .header .navbar ul {
         float: right;
     }
 }
 
 .header .navbar ul li {
-    padding: 25px;
-    display: inline-block;
     text-transform: uppercase;
-    margin-left: 20px;
+}
+
+@media (max-width: 575px) {             /* for extra small screens */
+    .header .navbar ul li {
+        display: block;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 576px) {             /* for small screens */
+    .header .navbar ul li {
+        display: block;
+        padding: 20px;
+    }
 }
 
 @media (min-width: 768px) {             /* for medium screens */
     .header .navbar ul li {
         font-size: 14px;
+        display: inline-block;
+        padding: 25px;
+        margin-left: 20px;
     }
 }
 
