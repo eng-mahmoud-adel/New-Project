@@ -1,27 +1,35 @@
-let index = 3;
+var index = 3;
 
-let boxOne = document.getElementById("box-one");
+var boxOne = document.getElementById("box-one");
     boxOne.setAttribute("id", "box-1");
 
-let boxTwo = document.getElementById("box-two");
+var boxTwo = document.getElementById("box-two");
     boxTwo.setAttribute("id", "box-2");
 
-let boxThree = document.getElementById("box-three");
+var boxThree = document.getElementById("box-three");
     boxThree.setAttribute("id", "box-3");
+
+var input = document.getElementById("input");
+
+var btn = document.getElementById("add");
+var parent = document.getElementById("service-title");
+var closeIcon = document.getElementById("close-icon");
 
 // for adding new box
 function addNewBox () {
-    index++;
-    let cloneBox = boxTwo.cloneNode(true);
-        cloneBox.setAttribute("id", "box-"+index);
-
-        cloneBox.setAttribute("style", "margin: 5px 2px;");
-        
-    
-    let parent = document.getElementById("service-title");
-        parent.appendChild(cloneBox);
+    if (input.value == "") {
+     return false;
+    } else { 
+        index++;
+        var newDiv = document.createElement("div");
+        var inputValue = document.createTextNode(input.value);
+        parent.appendChild(newDiv);
+        newDiv.appendChild(inputValue)
+        newDiv.setAttribute("id", "box-"+index);
+        newDiv.appendChild(closeIcon);
+        newDiv.setAttribute("style", "margin: 5px 2px;");
+    }
 }
-
 
 // for removing boxes
 function deleteBoxOne () {
