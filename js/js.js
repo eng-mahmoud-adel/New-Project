@@ -13,7 +13,15 @@ var input = document.getElementById("input");
 
 var btn = document.getElementById("add");
 var parent = document.getElementById("service-title");
-var closeIcon = document.getElementById("close-icon");
+
+var closeIconOne = document.getElementById("box-one");
+    closeIconOne.setAttribute("id", "box-1");
+
+var closeIconTwo = document.getElementById("box-two");
+    closeIconTwo.setAttribute("id", "box-2");
+
+var closeIconThree = document.getElementById("box-three");
+    closeIconThree.setAttribute("id", "box-3");
 
 // for adding new box
 function addNewBox () {
@@ -26,20 +34,39 @@ function addNewBox () {
         parent.appendChild(newDiv);
         newDiv.appendChild(inputValue)
         newDiv.setAttribute("id", "box-"+index);
-        newDiv.appendChild(closeIcon);
+
+        var newCloseIcon = closeIconThree.cloneNode(true);
+        newCloseIcon.setAttribute("id", "box-"+index);
+        newCloseIcon.setAttribute("onclick", "deleteNewBox()");
+        newDiv.appendChild(newCloseIcon);
         newDiv.setAttribute("style", "margin: 5px 2px;");
+        
+        // for deleting new boxes
+        newCloseIcon.addEventListener("click", function deleteNewBox() {
+            if (newDiv.id == newCloseIcon.id) {
+                newDiv.parentNode.removeChild(newDiv);
+            }
+        });
+        
     }
 }
 
+
 // for removing boxes
 function deleteBoxOne () {
-    boxOne.parentNode.removeChild(boxOne);
+    if (boxOne.id == closeIconOne.id) {
+        boxOne.parentNode.removeChild(boxOne);
+    }
 }
 
 function deleteBoxTwo () {
-    boxTwo.parentNode.removeChild(boxTwo);
+    if (boxTwo.id == closeIconTwo.id) {
+        boxTwo.parentNode.removeChild(boxTwo);
+    } 
 }
 
 function deleteBoxThree () {
-    boxThree.parentNode.removeChild(boxThree);
+    if (boxThree.id == closeIconThree.id) {
+        boxThree.parentNode.removeChild(boxThree);
+    } 
 }
